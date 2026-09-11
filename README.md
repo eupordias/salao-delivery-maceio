@@ -15,14 +15,25 @@
 
 ## 🚀 Links de Acesso Online (Produção)
 
-| Módulo / Recurso | Link Direto | Status |
+### 🌐 Frontend (Web & Mobile)
+| Plataforma | Link Direto | Status |
 |---|---|---|
-| 📊 **Dashboard Geral** | [frontend-eight-liard-17.vercel.app/admin/dashboard](https://frontend-eight-liard-17.vercel.app/admin/dashboard) | 🟢 **Online** |
-| 📦 **Gestão de Estoque** | [frontend-eight-liard-17.vercel.app/admin/inventory](https://frontend-eight-liard-17.vercel.app/admin/inventory) | 🟢 **Online** |
+| 🐙 **GitHub Pages (Front)** | [eupordias.github.io/salao-delivery-maceio](https://eupordias.github.io/salao-delivery-maceio/) | 🟢 **Publicado (`gh-pages`)** |
+| ▲ **Vercel (Front)** | [frontend-eight-liard-17.vercel.app/admin/dashboard](https://frontend-eight-liard-17.vercel.app/admin/dashboard) | 🟢 **Online (Produção)** |
+| 📦 **Módulo de Estoque** | [frontend-eight-liard-17.vercel.app/admin/inventory](https://frontend-eight-liard-17.vercel.app/admin/inventory) | 🟢 **Online** |
 | 💰 **Fluxo de Caixa & DRE** | [frontend-eight-liard-17.vercel.app/admin/financial](https://frontend-eight-liard-17.vercel.app/admin/financial) | 🟢 **Online** |
-| 👥 **CRM & Resgate de Clientes** | [frontend-eight-liard-17.vercel.app/admin/crm](https://frontend-eight-liard-17.vercel.app/admin/crm) | 🟢 **Online** |
+| 👥 **CRM & Resgate** | [frontend-eight-liard-17.vercel.app/admin/crm](https://frontend-eight-liard-17.vercel.app/admin/crm) | 🟢 **Online** |
+
+### ⚙️ Backend & Banco de Dados
+| Serviço | Endpoint / Conexão | Status |
+|---|---|---|
+| 🗄️ **Supabase PostgreSQL** | `postgresql://...db.dfabaoikshmffgcdiunu.supabase.co:5432/postgres?schema=salao` | 🟢 **Ativo (sa-east-1)** |
+| ⚡ **API Server (Express)** | `http://localhost:3001` / Deploy Railway (`/api/admin/*`) | 🟢 **Configurado** |
 | 🐙 **Repositório GitHub** | [github.com/eupordias/salao-delivery-maceio](https://github.com/eupordias/salao-delivery-maceio) | 🟢 **Público** |
-| 🗄️ **Banco de Dados (Supabase)** | `db.dfabaoikshmffgcdiunu.supabase.co` (`salao`) | 🟢 **Ativo** |
+
+> [!TIP]
+> **Ativação do GitHub Pages no repositório:**
+> Acesse **GitHub > Settings > Pages** e certifique-se de que a fonte está definida como **Deploy from a branch** selecionando a branch **`gh-pages`** e pasta **`/ (root)`**.
 
 ---
 
