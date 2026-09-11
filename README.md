@@ -15,10 +15,12 @@
 
 ## 🚀 Links de Acesso Online (Produção)
 
-### 🌐 Frontend (Página de Tráfego Pago & Painel de Gestão)
-| Recurso / Página | Link Direto | Finalidade | Status |
+### 🌐 Ecossistema Frontend (Web & Mobile)
+| Módulo / Página | Link Direto | Propósito | Status |
 |---|---|---|---|
-| ✨ **Landing Page (Tráfego Pago)** | [frontend-eight-liard-17.vercel.app](https://frontend-eight-liard-17.vercel.app/) | Conversão de clientes, catálogo e agendamento | 🟢 **Online** |
+| ✨ **Página Inicial (Landing)** | [frontend-eight-liard-17.vercel.app](https://frontend-eight-liard-17.vercel.app/) | Conversão de clientes, catálogo e contador de conexões | 🟢 **Online** |
+| 💅 **Buscar Especialistas** | [frontend-eight-liard-17.vercel.app/profissionais](https://frontend-eight-liard-17.vercel.app/profissionais) | Lista de profissionais com filtros (Serviço, Bairro, Dia) e WhatsApp | 🟢 **Online** |
+| ✂️ **Cadastro de Profissional** | [frontend-eight-liard-17.vercel.app/cadastro-profissional](https://frontend-eight-liard-17.vercel.app/cadastro-profissional) | Inscrição de novos profissionais e definição de agenda | 🟢 **Online** |
 | 🐙 **GitHub Pages (Front)** | [eupordias.github.io/salao-delivery-maceio](https://eupordias.github.io/salao-delivery-maceio/) | Espelho estático no GitHub Pages | 🟢 **Publicado (`gh-pages`)** |
 | 📊 **Dashboard Administrativo** | [frontend-eight-liard-17.vercel.app/admin/dashboard](https://frontend-eight-liard-17.vercel.app/admin/dashboard) | Gestão do salão, KPIs e faturamento | 🟢 **Online** |
 | 📦 **Módulo de Estoque** | [frontend-eight-liard-17.vercel.app/admin/inventory](https://frontend-eight-liard-17.vercel.app/admin/inventory) | Gramaturas de Mega Hair, tintas e insumos | 🟢 **Online** |
