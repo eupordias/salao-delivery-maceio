@@ -1,14 +1,28 @@
-﻿<div align="center">
+<div align="center">
 
 # ✦ Salão Delivery Maceió
 ### *Beleza de alto padrão, na sua porta.*
 
-![Status](https://img.shields.io/badge/status-em%20produção-00E5FF?style=for-the-badge&labelColor=0B0B0B)
-![Stack](https://img.shields.io/badge/stack-Next.js%20%7C%20Node.js%20%7C%20PostgreSQL-EC4899?style=for-the-badge&labelColor=0B0B0B)
-![Região](https://img.shields.io/badge/região-Maceió%2C%20AL-00E5FF?style=for-the-badge&labelColor=0B0B0B)
-![Dev](https://img.shields.io/badge/dev-Éverson%20Dias-EC4899?style=for-the-badge&labelColor=0B0B0B)
+![Status](https://img.shields.io/badge/status-online%20%7C%20produção-00E5FF?style=for-the-badge&labelColor=0B0B0B)
+![Deploy](https://img.shields.io/badge/deploy-Vercel-EC4899?style=for-the-badge&labelColor=0B0B0B&logo=vercel)
+![Stack](https://img.shields.io/badge/stack-Next.js%20%7C%20Node.js%20%7C%20Supabase-00E5FF?style=for-the-badge&labelColor=0B0B0B)
+![Região](https://img.shields.io/badge/região-Maceió%2C%20AL-EC4899?style=for-the-badge&labelColor=0B0B0B)
+![Dev](https://img.shields.io/badge/dev-Éverson%20Dias-00E5FF?style=for-the-badge&labelColor=0B0B0B)
 
 </div>
+
+---
+
+## 🚀 Links de Acesso Online (Produção)
+
+| Módulo / Recurso | Link Direto | Status |
+|---|---|---|
+| 📊 **Dashboard Geral** | [frontend-eight-liard-17.vercel.app/admin/dashboard](https://frontend-eight-liard-17.vercel.app/admin/dashboard) | 🟢 **Online** |
+| 📦 **Gestão de Estoque** | [frontend-eight-liard-17.vercel.app/admin/inventory](https://frontend-eight-liard-17.vercel.app/admin/inventory) | 🟢 **Online** |
+| 💰 **Fluxo de Caixa & DRE** | [frontend-eight-liard-17.vercel.app/admin/financial](https://frontend-eight-liard-17.vercel.app/admin/financial) | 🟢 **Online** |
+| 👥 **CRM & Resgate de Clientes** | [frontend-eight-liard-17.vercel.app/admin/crm](https://frontend-eight-liard-17.vercel.app/admin/crm) | 🟢 **Online** |
+| 🐙 **Repositório GitHub** | [github.com/eupordias/salao-delivery-maceio](https://github.com/eupordias/salao-delivery-maceio) | 🟢 **Público** |
+| 🗄️ **Banco de Dados (Supabase)** | `db.dfabaoikshmffgcdiunu.supabase.co` (`salao`) | 🟢 **Ativo** |
 
 ---
 
