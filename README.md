@@ -15,14 +15,15 @@
 
 ## 🚀 Links de Acesso Online (Produção)
 
-### 🌐 Frontend (Web & Mobile)
-| Plataforma | Link Direto | Status |
-|---|---|---|
-| 🐙 **GitHub Pages (Front)** | [eupordias.github.io/salao-delivery-maceio](https://eupordias.github.io/salao-delivery-maceio/) | 🟢 **Publicado (`gh-pages`)** |
-| ▲ **Vercel (Front)** | [frontend-eight-liard-17.vercel.app/admin/dashboard](https://frontend-eight-liard-17.vercel.app/admin/dashboard) | 🟢 **Online (Produção)** |
-| 📦 **Módulo de Estoque** | [frontend-eight-liard-17.vercel.app/admin/inventory](https://frontend-eight-liard-17.vercel.app/admin/inventory) | 🟢 **Online** |
-| 💰 **Fluxo de Caixa & DRE** | [frontend-eight-liard-17.vercel.app/admin/financial](https://frontend-eight-liard-17.vercel.app/admin/financial) | 🟢 **Online** |
-| 👥 **CRM & Resgate** | [frontend-eight-liard-17.vercel.app/admin/crm](https://frontend-eight-liard-17.vercel.app/admin/crm) | 🟢 **Online** |
+### 🌐 Frontend (Página de Tráfego Pago & Painel de Gestão)
+| Recurso / Página | Link Direto | Finalidade | Status |
+|---|---|---|---|
+| ✨ **Landing Page (Tráfego Pago)** | [frontend-eight-liard-17.vercel.app](https://frontend-eight-liard-17.vercel.app/) | Conversão de clientes, catálogo e agendamento | 🟢 **Online** |
+| 🐙 **GitHub Pages (Front)** | [eupordias.github.io/salao-delivery-maceio](https://eupordias.github.io/salao-delivery-maceio/) | Espelho estático no GitHub Pages | 🟢 **Publicado (`gh-pages`)** |
+| 📊 **Dashboard Administrativo** | [frontend-eight-liard-17.vercel.app/admin/dashboard](https://frontend-eight-liard-17.vercel.app/admin/dashboard) | Gestão do salão, KPIs e faturamento | 🟢 **Online** |
+| 📦 **Módulo de Estoque** | [frontend-eight-liard-17.vercel.app/admin/inventory](https://frontend-eight-liard-17.vercel.app/admin/inventory) | Gramaturas de Mega Hair, tintas e insumos | 🟢 **Online** |
+| 💰 **Fluxo de Caixa & DRE** | [frontend-eight-liard-17.vercel.app/admin/financial](https://frontend-eight-liard-17.vercel.app/admin/financial) | Controle de receitas, despesas e split | 🟢 **Online** |
+| 👥 **CRM & Resgate de Clientes** | [frontend-eight-liard-17.vercel.app/admin/crm](https://frontend-eight-liard-17.vercel.app/admin/crm) | Campanhas de resgate e clientes inativos | 🟢 **Online** |
 
 ### ⚙️ Backend & Banco de Dados
 | Serviço | Endpoint / Conexão | Status |
