@@ -212,10 +212,14 @@ export default function LandingPage() {
           </div>
 
           <nav className="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+            <Link href="/profissionais" className="hover:text-cyan-400 transition-colors text-cyan-300 font-semibold flex items-center gap-1">
+              <Sparkles size={14} />
+              <span>Especialistas</span>
+            </Link>
             <a href="#servicos" className="hover:text-cyan-400 transition-colors">Serviços</a>
             <a href="#como-funciona" className="hover:text-cyan-400 transition-colors">Como Funciona</a>
             <a href="#depoimentos" className="hover:text-cyan-400 transition-colors">Depoimentos</a>
-            <a href="#agendamento" className="hover:text-cyan-400 transition-colors">Agendar</a>
+            <Link href="/cadastro-profissional" className="hover:text-pink-400 transition-colors">Sou Profissional</Link>
           </nav>
 
           <div className="flex items-center space-x-4">
@@ -259,25 +263,31 @@ export default function LandingPage() {
             Especialistas renomados em <strong className="text-cyan-300 font-semibold">Mega Hair</strong>, <strong className="text-pink-300 font-semibold">Coloração & Mechas</strong> e <strong className="text-white font-semibold">Alinhamento Capilar</strong> atendendo no conforto do seu lar, condomínio ou hotel à beira-mar em Maceió.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a 
-              href="#agendamento" 
-              className="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold bg-gradient-to-r from-cyan-400 via-cyan-300 to-pink-500 text-black shadow-xl shadow-cyan-500/20 hover:opacity-95 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3"
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-2xl mx-auto">
+            <Link 
+              href="/profissionais" 
+              className="w-full sm:w-1/2 px-8 py-5 rounded-2xl text-base font-extrabold bg-gradient-to-r from-cyan-400 via-cyan-300 to-pink-500 text-black shadow-2xl shadow-cyan-500/25 hover:opacity-95 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3 text-center"
             >
-              <span>Agendar Meu Atendimento VIP</span>
-              <ArrowRight className="h-5 w-5" />
-            </a>
-            <a 
-              href="#servicos" 
-              className="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-semibold bg-[#1A1A1A] hover:bg-[#222222] text-white border border-[#2A2A2A] hover:border-gray-600 transition-all flex items-center justify-center gap-2"
+              <Sparkles className="h-5 w-5" />
+              <span>Quero Agendar</span>
+            </Link>
+            <Link 
+              href="/cadastro-profissional" 
+              className="w-full sm:w-1/2 px-8 py-5 rounded-2xl text-base font-extrabold bg-[#1A1A1A] hover:bg-[#222222] text-white border-2 border-[#2A2A2A] hover:border-pink-500/50 shadow-xl transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3 text-center"
             >
-              <Scissors className="h-5 w-5 text-cyan-400" />
-              <span>Ver Catálogo & Preços</span>
-            </a>
+              <Scissors className="h-5 w-5 text-pink-400" />
+              <span>Sou Profissional</span>
+            </Link>
+          </div>
+
+          {/* LaBelle Connection Counter */}
+          <div className="mt-6 flex items-center justify-center gap-2 text-xs font-semibold text-gray-400">
+            <span>Total de <strong className="text-cyan-400 font-bold">1.847 conexões</strong> de beleza já realizadas em Maceió</span>
+            <span className="text-pink-400 text-base">💜</span>
           </div>
 
           {/* Social Proof Badges */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-[#2A2A2A]/60">
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-[#2A2A2A]/60">
             <div className="p-4 rounded-xl bg-[#111111]/80 border border-[#2A2A2A]">
               <div className="flex items-center justify-center gap-1 text-yellow-400 mb-1">
                 {[...Array(5)].map((_, i) => (
