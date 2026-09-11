@@ -1,0 +1,197 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum UserRole {
+  ADMIN
+  CLIENT
+  STAFF
+}
+
+enum AppointmentStatus {
+  PENDING
+  CONFIRMED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+enum ProductCategory {
+  MEGA_HAIR
+  TINTA
+  QUERATINA
+  FITA_ADESIVA
+  HOMECARE
+  OUTRO
+}
+
+enum StockMovementType {
+  IN
+  OUT
+}
+
+enum TransactionType {
+  INCOME
+  EXPENSE
+}
+
+enum TransactionCategory {
+  SERVICE
+  DELIVERY_FEE
+  PRODUCT_SALE
+  STAFF_SPLIT
+  STOCK_COST
+  OTHER
+}
+
+enum CampaignStatus {
+  DRAFT
+  SENDING
+  SENT
+  FAILED
+}
+
+enum CampaignChannel {
+  WHATSAPP
+  EMAIL
+  BOTH
+}
+
+model User {
+  id               String        @id @default(uuid())
+  name             String
+  email            String        @unique
+  phone            String
+  passwordHash     String
+  role             UserRole      @default(CLIENT)
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  appointments     Appointment[] @relation("ClientAppointments")
+  staffAppointments Appointment[] @relation("StaffAppointments")
+  transactions     Transaction[] @relation("ClientTransactions")
+  staffTransactions Transaction[] @relation("StaffTransactions")
+}
+
+model Service {
+  id               String        @id @default(uuid())
+  name             String
+  description      String
+  basePrice        Decimal
+  durationMinutes  Int
+  isActive         Boolean       @default(true)
+  createdAt        DateTime      @default(now())
+
+  appointments     Appointment[]
+  productUsages    ServiceProductUsage[]
+}
+
+model ServiceProductUsage {
+  id               String        @id @default(uuid())
+  serviceId        String
+  productId        String
+  quantityUsed     Decimal
+
+  service          Service       @relation(fields: [serviceId], references: [id])
+  product          Product       @relation(fields: [productId], references: [id])
+}
+
+model Product {
+  id               String        @id @default(uuid())
+  name             String
+  category         ProductCategory
+  barcode          String?
+  currentStock     Decimal
+  minStock         Decimal
+  unit             String        @default("un")
+  costPrice        Decimal
+  sellPrice        Decimal?
+  isActive         Boolean       @default(true)
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  movements        StockMovement[]
+  serviceUsages    ServiceProductUsage[]
+}
+
+model StockMovement {
+  id               String        @id @default(uuid())
+  productId        String
+  type             StockMovementType
+  quantity         Decimal
+  reason           String
+  appointmentId    String?
+  createdAt        DateTime      @default(now())
+
+  product          Product       @relation(fields: [productId], references: [id])
+}
+
+model Appointment {
+  id               String        @id @default(uuid())
+  clientId         String
+  staffId          String?
+  serviceId        String
+  status           AppointmentStatus @default(PENDING)
+  scheduledAt      DateTime
+  address          String
+  neighborhoodId   String?
+  totalAmount      Decimal
+  deliveryFee      Decimal       @default(0)
+  notes            String?
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  client           User          @relation("ClientAppointments", fields: [clientId], references: [id])
+  staff            User?         @relation("StaffAppointments", fields: [staffId], references: [id])
+  service          Service       @relation(fields: [serviceId], references: [id])
+  transactions     Transaction[]
+}
+
+model Transaction {
+  id               String        @id @default(uuid())
+  type             TransactionType
+  category         TransactionCategory
+  amount           Decimal
+  description      String
+  appointmentId    String?
+  clientId         String?
+  staffId          String?
+  date             DateTime      @default(now())
+  createdAt        DateTime      @default(now())
+
+  appointment      Appointment?  @relation(fields: [appointmentId], references: [id])
+  client           User?         @relation("ClientTransactions", fields: [clientId], references: [id])
+  staff            User?         @relation("StaffTransactions", fields: [staffId], references: [id])
+}
+
+model Campaign {
+  id               String        @id @default(uuid())
+  name             String
+  segment          String
+  message          String
+  channel          CampaignChannel @default(WHATSAPP)
+  status           CampaignStatus @default(DRAFT)
+  sentCount        Int           @default(0)
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  logs             CampaignLog[]
+}
+
+model CampaignLog {
+  id               String        @id @default(uuid())
+  campaignId       String
+  clientId         String
+  channel          String
+  status           String
+  sentAt           DateTime?
+  createdAt        DateTime      @default(now())
+
+  campaign         Campaign      @relation(fields: [campaignId], references: [id])
+}
