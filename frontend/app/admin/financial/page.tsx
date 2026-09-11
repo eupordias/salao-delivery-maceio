@@ -145,7 +145,7 @@ export default function FinancialPage() {
                 <Tooltip 
                   contentStyle={{ backgroundColor: '#1A1A1A', borderColor: '#2A2A2A', color: '#fff' }}
                   itemStyle={{ color: '#fff' }}
-                  formatter={(value: number) => `R$ ${value.toFixed(2)}`}
+                  formatter={(value: any) => `R$ ${Number(value || 0).toFixed(2)}`}
                 />
                 <Legend 
                   verticalAlign="bottom" 

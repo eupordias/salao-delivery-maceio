@@ -170,7 +170,7 @@ export default function CRMPage() {
                     <td className="px-4 py-3">
                       <div className="flex items-center gap-2">
                         <span className="font-medium text-gray-200">{client.name}</span>
-                        {client.vip && <Crown size={14} className="text-pink-400" title="VIP" />}
+                        {client.vip && <span title="VIP"><Crown size={14} className="text-pink-400" /></span>}
                       </div>
                       <div className="text-xs text-gray-500">{client.phone}</div>
                     </td>

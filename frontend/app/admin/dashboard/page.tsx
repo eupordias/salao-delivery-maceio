@@ -96,7 +96,7 @@ export default function DashboardPage() {
                 <Tooltip 
                   contentStyle={{ backgroundColor: '#1A1A1A', borderColor: '#2A2A2A', color: '#fff' }}
                   itemStyle={{ color: '#00E5FF' }}
-                  formatter={(value: number) => [`R$ ${value.toFixed(2)}`, 'Receita']}
+                  formatter={(value: any) => [`R$ ${Number(value || 0).toFixed(2)}`, 'Receita']}
                 />
                 <Area type="monotone" dataKey="valor" stroke="#00E5FF" strokeWidth={2} fillOpacity={1} fill="url(#colorValor)" />
               </AreaChart>

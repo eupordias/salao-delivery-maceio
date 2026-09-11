@@ -39,7 +39,7 @@ export default function InventoryPage() {
   };
 
   const getCategoryBadge = (category: string) => {
-    const categories: Record<string, 'cyan' | 'pink' | 'info' | 'warning' | 'success'> = {
+    const categories: Record<string, 'cyan' | 'pink' | 'info' | 'warning' | 'success' | 'danger' | 'muted'> = {
       'MEGA_HAIR': 'cyan',
       'TINTA': 'pink',
       'QUERATINA': 'info',
